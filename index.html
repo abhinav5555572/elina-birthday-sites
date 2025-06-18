@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Elina 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
+      overflow-x: hidden;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url('https://static.vecteezy.com/system/resources/previews/011/669/909/original/happy-birthday-banner-template-happy-birthday-text-in-frame-empty-space-with-balloons-and-gifts-element-for-cute-birth-day-celebration-greeting-card-design-illustration-vector.jpg') center/cover no-repeat;
+      color: white;
+      text-shadow: 1px 1px 5px #000;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .typewriter h1 {
+      overflow: hidden;
+      border-right: .15em solid white;
+      white-space: nowrap;
+      animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+      max-width: 100%;
+      font-size: 4em;
+      color: #4B0082;
+      font-weight: bold;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: white }
+    }
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .gallery img {
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .letter {
+      font-family: 'Georgia', serif;
+      font-size: 1.2em;
+      background: #fff;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    .surprise-box {
+      margin-top: 40px;
+      padding: 30px;
+      background: #fff8f9;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .surprise-box:hover {
+      transform: scale(1.02);
+    }
+    .hidden-message {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #d63384;
+      transition: all 0.6s ease;
+      transform: scale(0.9);
+    }
+    .hidden-message.visible {
+      transform: scale(1.1);
+      color: #d63384;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #audio-warning {
+      text-align: center;
+      font-size: 1em;
+      background: #fff3cd;
+      padding: 10px;
+      color: #856404;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="typewriter">
+    <h1>Happy Birthday Elina 🎂</h1>
+    <p>You are the best person I’ve ever met.</p>
+  </header>
+
+  <section class="fade-in">
+    <h2>🎈 Memories Gallery</h2>
+    <div class="gallery">
+      <img src="https://github.com/abhinav5555572/elina-birthday-sites/blob/main/1000052034.png?raw=true" alt="Elina 5">
+      <img src="https://github.com/abhinav5555572/elina-birthday-sites/blob/main/1000052033%20(2).png?raw=true" alt="Elina 6">
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <h2>💌 A Letter to You</h2>
+    <div class="letter">
+      <p>To the one who brightens every room and every moment,<br><br>
+      Elina, you are not just a friend, you're a blessing. On this special day, I just want to say thank you for being you—beautiful, kind, strong, and truly one of a kind.<br><br>
+      Happy Birthday to the best person I’ve ever met. 💖</p>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <h2>🎁 A Birthday Surprise!</h2>
+    <div class="surprise-box" onclick="showSurprise()">
+      <h3>Click to Open Your Surprise!</h3>
+      <div id="msg" class="hidden-message">
+        You deserve all the love, laughter, and happiness in the world. Here's to many more magical birthdays together, Elina! 💕🎂
+      </div>
+    </div>
+  </section>
+
+  <div id="audio-warning">🔊 Tap anywhere to start the birthday music!</div>
+
+  <audio id="birthday-audio" autoplay loop>
+    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Monk_Turner__Fascinoma/The_New_Birthday_Song_Contest/Monk_Turner__Fascinoma_-_Its_Your_Birthday.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio controls>
+    <source src="https://www.chosic.com/wp-content/uploads/2021/06/Happy-Birthday-To-You-Instrumental-Version.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio controls>
+    <source src="https://www.chosic.com/wp-content/uploads/2021/06/Happy-Birthday-Piano-Music.mp3" type="audio/mpeg">
+  </audio>
+
+  <canvas class="confetti"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+  <script>
+    const confettiSettings = { target: document.querySelector('.confetti') };
+    const confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+
+    function showSurprise() {
+      const msg = document.getElementById('msg');
+      msg.style.display = 'block';
+      msg.classList.add('visible');
+      confetti.clear();
+      setTimeout(() => confetti.render(), 300);
+    }
+
+    const faders = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      faders.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('birthday-audio');
+      const audioWarning = document.getElementById('audio-warning');
+
+      audio.play().catch(() => {
+        audioWarning.style.display = 'block';
+        document.body.addEventListener('click', () => {
+          audio.play();
+          audioWarning.style.display = 'none';
+        }, { once: true });
+      });
+    });
+  </script>
+</body>
+</html>
