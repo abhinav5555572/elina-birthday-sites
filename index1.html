@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Elina 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
+      overflow-x: hidden;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url('https://i.imgur.com/MT1DpXb.gif') center/cover no-repeat;
+      color: white;
+      text-shadow: 1px 1px 5px #000;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.5em;
+    }
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .gallery img {
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .letter {
+      font-family: 'Georgia', serif;
+      font-size: 1.2em;
+      background: #fff;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    .music-player {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .surprise-box {
+      margin-top: 40px;
+      padding: 30px;
+      background: #fff8f9;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .surprise-box:hover {
+      transform: scale(1.02);
+    }
+    .hidden-message {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #d63384;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Happy Birthday Elina 🎂</h1>
+    <p>You are the best person I’ve ever met.</p>
+  </header>
+
+  <section>
+    <h2>🎈 Memories Gallery</h2>
+    <div class="gallery">
+      <img src="https://i.imgur.com/yZQ8f6H.jpg" alt="Elina 1">
+      <img src="https://i.imgur.com/zBTuZGh.jpg" alt="Elina 2">
+      <img src="https://i.imgur.com/6UI5Qn2.jpg" alt="Elina 3">
+      <img src="https://i.imgur.com/qINjEXN.jpg" alt="Elina 4">
+    </div>
+  </section>
+
+  <section>
+    <h2>💌 A Letter to You</h2>
+    <div class="letter">
+      <p>To the one who brightens every room and every moment,
+      <br><br>
+      Elina, you are not just a friend, you're a blessing. On this special day, I just want to say thank you for being you—beautiful, kind, strong, and truly one of a kind.
+      <br><br>
+      Happy Birthday to the best person I’ve ever met. 💖</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>🎁 A Birthday Surprise!</h2>
+    <div class="surprise-box" onclick="document.getElementById('msg').style.display='block'">
+      <h3>Click to Open Your Surprise!</h3>
+      <div id="msg" class="hidden-message">
+        You deserve all the love, laughter, and happiness in the world. Here's to many more magical birthdays together, Elina! 💕🎂
+      </div>
+    </div>
+  </section>
+
+  <div class="music-player">
+    <audio controls autoplay loop>
+      <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <canvas class="confetti"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+  <script>
+    const confettiSettings = { target: 'confetti' };
+    const confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+  </script>
+</body>
+</html>
